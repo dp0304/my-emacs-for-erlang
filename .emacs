@@ -189,7 +189,7 @@
     (list "~/.emacs.d/emakefly" (list local-file))))
 
 (add-to-list 'flymake-allowed-file-name-masks '("\\.erl\\'" flymake-erlang-init))
-;;(add-hook 'find-file-hook 'flymake-find-file-hook)
+
 
 
 
@@ -241,7 +241,7 @@
 
     (fset 'erlang-flymake-get-code-path-dirs 'ebm-get-deps-code-path-dirs)
     (fset 'erlang-flymake-get-include-dirs-function 'ebm-get-deps-include-dirs)
-
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 ;;----------------ecb--------------
 ;; cedet
 (load-file "~/.emacs.d/cedet-1.0/common/cedet.el")
